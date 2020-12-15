@@ -1,0 +1,12 @@
+# General
+.DS_Store
+.vscode/
+
+# dependencies
+node_modules/
+
+# output from webpack
+build/
+
+#environment variables
+.env
