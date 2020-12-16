@@ -24,7 +24,9 @@ app.get('/', (req, res) => {
 
 // get restaurants by zip code
 
-// ??? get specific restaurants (with specific food type and amenities) ???
+// get specific restaurants (with specific cuisine and amenities, zipcode)
+
+// get all data for specific restaurant (join request for basic data, amenities, and comments for restaurant)
 
 /* Oauth Routes Below */
 // message sent on failed authentication
@@ -41,16 +43,16 @@ const checkUserLoggedIn = (req, res, next) => {
 //Protected Route to add restaurant
 app.get('/profile', checkUserLoggedIn, (req, res) => {
   // res.locals.displayName = req.user.displayName;
-  ressend(`<h1>${req.user.displayName}'s Profile Page</h1>`.)
+  res.send(`<h1>${req.user.displayName}'s Profile Page</h1>`.
 });
 
 //Protected Route to edit restaurant
 
-//Protected Route to add comment
+//Protected Route to add comment, need userId for this?
 
-//Protected Route to edit comment
+//Protected Route to edit comment, only the user that created comment is allowed (check this by userId)
 
-//Protected Route to delete comment
+//Protected Route to delete comment, only the user that created comment is allowed
 
 // Auth Routes
 // telling passport what strategy to use, and authenticating request
