@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
-require('./passport');
+require('./passport.js');
 
 const app = express();
 
@@ -43,7 +43,7 @@ const checkUserLoggedIn = (req, res, next) => {
 //Protected Route to add restaurant
 app.get('/profile', checkUserLoggedIn, (req, res) => {
   // res.locals.displayName = req.user.displayName;
-  res.send(`<h1>${req.user.displayName}'s Profile Page</h1>`.
+  res.send(`<h1>${req.user.displayName}'s Profile Page</h1>`);
 });
 
 //Protected Route to edit restaurant
