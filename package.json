@@ -20,7 +20,12 @@
   },
   "homepage": "https://github.com/Dragonite-39/Reinforcement#readme",
   "dependencies": {
+    "cookie-session": "^1.4.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
