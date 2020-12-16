@@ -15,7 +15,7 @@ import '../styles/styles.scss';
 
 
 
-// const mapDispatchToPreps = (dispatch) => ({
+// const mapDispatchToProps = (dispatch) => ({
 
 // })
 
