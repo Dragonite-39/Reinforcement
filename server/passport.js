@@ -21,10 +21,6 @@ passport.use(new GoogleStrategy({
   },
 
   function(accessToken, refreshToken, profile, done) {
-    //??? do we need these ???
-    console.log("accessToken:", accessToken, "refreshToken", refreshToken);
-
-    console.log("sucessful login, profile: ", profile);
     // Done is invoked if the credentials are valid 
     // returns user profile
     return done(null, profile);
