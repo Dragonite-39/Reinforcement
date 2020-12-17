@@ -24,14 +24,14 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="wrapper">
       <div className="menu">
         <MenuBox />
       </div>
       <div className="mainDisplay">
         <RestaurantsDisplay />
       </div>
-      </>
+      </div>
     )
   }
 }
