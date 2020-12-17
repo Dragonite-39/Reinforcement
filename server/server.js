@@ -1,10 +1,16 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 require('./passport.js');
+const restaurantController = require('./controllers/restaurantController.js');
 
 const app = express();
 // need to setup cookie parser and body parser...
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(cookieParser());
+
 // Configure Session Storage
 app.use(cookieSession({
   name: 'session-name',
@@ -27,12 +33,12 @@ app.get('/', (req, res) => {
 });
 
 // get restaurants by zip code
-app.get('/zipcode:zipcode', (req, res) => {
+app.get('/zipcode:zipcode', restaurantController.byZipcode, (req, res) => {
   res.status(200).json(res.locals.restaurants);
 });
 
 // get specific restaurants (with specific cuisine and amenities, zipcode)
-app.get('/filters:filterInfo', (req, res) => {
+app.post('/filters', restaurantController.byFilterInfo, (req, res) => {
   res.status(200).json(res.locals.restaurants);
 });
 
