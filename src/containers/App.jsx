@@ -12,12 +12,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import '../styles/styles.scss';
+import MenuBox from '../components/MenuBox.jsx';
+import RestaurantsDisplay from './RestaurantsDisplay.jsx';
+import '../styles/styles.scss';
 
-
-
-// const mapDispatchToProps = (dispatch) => ({
-
-// })
 
 class App extends Component {
   constructor (props) {
@@ -26,7 +24,14 @@ class App extends Component {
 
   render() {
     return (
-      <h2>TESTING REACT APP</h2>
+      <>
+      <div className="menu">
+        <MenuBox />
+      </div>
+      <div className="mainDisplay">
+        <RestaurantsDisplay />
+      </div>
+      </>
     )
   }
 }

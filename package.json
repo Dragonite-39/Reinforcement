@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
   "scripts": {
     "start": "cross-env NODE_ENV='production' node server/server.js",
     "build": "cross-env NODE_ENV='production' webpack",
@@ -20,18 +25,22 @@
   },
   "homepage": "https://github.com/Dragonite-39/Reinforcement#readme",
   "dependencies": {
+    "buffer": "^6.0.3",
     "cookie-session": "^1.4.0",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
+    "path-browserify": "^1.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "util": "^0.12.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

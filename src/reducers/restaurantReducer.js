@@ -14,11 +14,31 @@
  const initialState = {
     currentRestaurant: null,
     filterInfo: {
-      zip: null,
+      zipcode: '',
+      // 11207 ,
       cuisine: [],
       amenities: []
     },
-    filteredRestaurants: [],
+    filteredRestaurants: [
+      {
+        name: 'Salad Boi',
+        address: '123 23rd St.',
+        cuisine: 'Vegetarian',
+        open: true
+      },
+      {
+        name: 'Plumpy Dumpy',
+        address: '227 Madison Ave',
+        cuisine: 'Chinese',
+        open: true
+      },
+      {
+        name: 'Sherlock\'s',
+        address: '221B Baker St.',
+        cuisine: 'American',
+        open: false
+      }
+    ],
       // Structure of an element on the filteredRestaurants array
       // {
       //   name: '',
@@ -31,6 +51,7 @@
       // {
       //   name: '',
       //   restaurantId: '',
+      //   zip: '', 
       //   cuisine: '',
       //   address: '',
       //   phone: '',
@@ -42,14 +63,15 @@
       //   comments: [
       //     {
       //       commintId: '', 
-      //       text: '',
+      //       comment: '',
       //       username: '',
       //       timestamp: ''
       //     }
       //   ]
       // }
     username: '',
-    userId: ''
+    userId: '',
+    cuisines: ["American", "Vegetarian", "Chinese", "Japanese", "Thai", "Indian", "Italian", "Pizza", "Mexican", "Korean", "Latin American", "Caribbean", "Soul Food", "BBQ", "Vietnamese", "Other"]
  };
 
  const restaurantReducer = (state = initialState, action) => {
@@ -71,6 +93,11 @@
 
       case types.GET_COMMENTS:
 
+
+      case types.LOGIN_USER:
+
+
+      case types.HANDLE_ZIP_INPUT:
 
       default:
         return state;
