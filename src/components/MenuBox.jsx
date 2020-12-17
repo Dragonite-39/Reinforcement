@@ -53,9 +53,10 @@
       // console.log("PROPS: ", this.props);
      const cuisines = []; 
      for (let i = 0; i < this.props.cuisines.length; i++) {
-       console.log("TEST: ",this.props.cuisines[i]);
+       console.log("TEST: ", this.props.cuisines[i]);
        const cuisine = this.props.cuisines[i];
-      //  cuisines.push(<CuisineItem key={`cuisine${i}`} cuisine={cuisine}/>)
+       cuisines.push(<CuisineItem key={`cuisine${i}`} cuisine={cuisine}/>)
+      
      }
     
 
@@ -103,9 +104,9 @@
             </select> */}
             <div id="cuisines">
               <h3>Choose a Cuisine</h3>
-              {/* { cuisines } */}
+              { cuisines }
 
-              <input type="checkbox" id="american" name="american" value="American"></input>
+              {/* <input type="checkbox" id="american" name="american" value="American"></input>
                 <label for="american">American</label> 
               <input type="checkbox" id="vegetarian" name="vegetarian" value="Vegetarian"></input>
                 <label for="vegetarian">Vegetarian</label> <br/>
@@ -138,7 +139,7 @@
               <input type="checkbox" id="vietnamese" name="vietnamese" value="Vietnamese"></input>
                 <label for="vietnamese">Vietnamese</label> 
               <input type="checkbox" id="other" name="other" value="Other"></input>
-                <label for="other">Other</label> 
+                <label for="other">Other</label>  */}
 
             </div>
             {/* {amenities drop down} */}

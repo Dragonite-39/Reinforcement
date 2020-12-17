@@ -19,7 +19,26 @@
       cuisine: [],
       amenities: []
     },
-    filteredRestaurants: [],
+    filteredRestaurants: [
+      {
+        name: 'Salad Boi',
+        address: '123 23rd St.',
+        cuisine: 'Vegetarian',
+        open: true
+      },
+      {
+        name: 'Plumpy Dumpy',
+        address: '227 Madison Ave',
+        cuisine: 'Chinese',
+        open: true
+      },
+      {
+        name: 'Sherlock\'s',
+        address: '221B Baker St.',
+        cuisine: 'American',
+        open: false
+      }
+    ],
       // Structure of an element on the filteredRestaurants array
       // {
       //   name: '',

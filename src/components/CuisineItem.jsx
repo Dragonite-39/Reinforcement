@@ -9,8 +9,8 @@
 //  * ************************************
 //  */
 
-// import React, { component } from 'react';
-// import { render } from 'sass';
+import React, { Component } from 'react';
+
  
 
 // //  const CuisineItem = (props) => {
@@ -21,17 +21,21 @@
      
 // //  }
 
-// class CuisineItem extends Component { 
-//   constructor(props) {
-//     super(props);
-//   }
-//   render() {
-//     console.log("TEST FROM CUISINE ITEM: ", props.cuisine)
+class CuisineItem extends Component { 
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    console.log("TEST FROM CUISINE ITEM: ", this.props.cuisine)
+    let cuisine = this.props.cuisine;
 
-//     return(
-//       <p>{props.cuisine}</p>
-//     )
-//   }
-// }
+    return(
+      <div className="cuisineBox">
+      <input type="checkbox" id={cuisine} name={cuisine} value={cuisine}></input>
+      <label for={cuisine}>{cuisine}</label> 
+      </div>
+    )
+  }
+}
 
-//  export default CuisineItem;
+ export default CuisineItem;

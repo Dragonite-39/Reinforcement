@@ -13,6 +13,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions.js';
 
+
+
 class RestaurantsDisplay extends Component {
   constructor(props) {
     super(props)
@@ -22,8 +24,9 @@ class RestaurantsDisplay extends Component {
 
 
     return (
-      <>
-      </>
+      <div className="restaurants">
+        
+      </div>
     )
   }
 }
