@@ -1,3 +1,81 @@
-body {
-  background-color: pink;
+@import './_variables.scss';
+
+* {
+  font-family: $content-font;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
+
+html body {
+  height: 100vh;
+  width: 100vw;
+  background-color: $primary-white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  grid-template-rows: auto;
+  height: 100vh;
+    .menu {
+    border-right: 1px solid $primary-black;
+    background-color: $primary-brand-color;
+    grid-column: 1/2;
+    padding: 20px;
+    .filterHeading {
+      font-family: $heading-font;
+      font-weight: $heavy-weight;
+      font-size: 1.5em; 
+      padding-bottom: 30px;
+    }
+    .inputs h3 {
+      font-size: 1.25em;
+      padding-top: 25px;
+      padding-bottom: 5px;
+    }
+    .inputs .goButton {
+      background: $affirmation;
+      border: 1px solid $primary-black;
+      box-sizing: border-box;
+      border-radius: 20px;
+      width: 175px;
+      margin-top: 30px;
+    }
+    }
+    .mainDisplay {
+      display: flex;
+      flex-flow: row wrap;
+      height: 100%;
+      grid-column: 2/-1;
+      padding: 40px;
+      //  background-color: lightblue;
+      .restaurantCard {
+        background-color: $light-neutral;
+        box-shadow: 8px 8px 8px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 10px;
+        .restCardName {
+          font-family: $sub-heading-font;
+          font-weight: $heavy-weight;
+          font-size: 1.25em;
+          // color: red;
+        }
+        .restCardOpen {
+          font-size: 0.75em;
+        }
+      }
+
+    }
+}
+
+
+
+
+
+
+

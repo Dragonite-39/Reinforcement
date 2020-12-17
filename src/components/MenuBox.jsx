@@ -62,9 +62,9 @@
 
      return (
        <>
-          <h2>Filter Restaurants</h2>
+          <h2 className="filterHeading">EATSMART</h2>
           <div className="inputs">
-            <h3>Enter Zipcode</h3>
+            {/* <h3>Enter Zipcode</h3> */}
             {/* {zip code input} */}
             <input 
               type="text"
@@ -158,7 +158,7 @@
             </div>
 
             <button
-              id="goButton"
+              className="goButton"
               type="button"
               onClick={(e) => console.log(e)
 
