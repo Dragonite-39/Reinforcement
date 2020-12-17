@@ -1,13 +1,13 @@
-// /**
-//  * ************************************
-//  *
-//  * @module  CuisineItem
-//  * @author Lara, Chris
-//  * @date 12/16.
-//  * @description one Cuisine type
-//  *
-//  * ************************************
-//  */
+/**
+ * ************************************
+ *
+ * @module  CuisineItem
+ * @author Lara, Chris
+ * @date 12/16.
+ * @description one Cuisine type
+ *
+ * ************************************
+ */
 
 import React, { Component } from 'react';
 
