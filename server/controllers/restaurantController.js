@@ -1,18 +1,22 @@
+const db = require('../models/restaurantsModel.js');
+
 
   const restaurantController = {};
   
   restaurantController.byZipcode = (req, res, next) => {
     // get zipcode from req.params
     const { zipcode } = req.params;
+    console.log("zipcode:", zipcode);
     
     const queryString = `
       SELECT * FROM restaurants 
-      WHERE location = $1
+      WHERE zipcode = $1
     `;
     
     // query db for restaurants with zipcode that matches the one from params
     db.query(queryString, [zipcode])
       .then((data) => {
+        console.log("data", data)
         res.locals.restaurants = data.rows;
         return next();
       })
@@ -22,15 +26,16 @@
 // get specific restaurants (with specific cuisine and amenities, zipcode)
 restaurantController.byFilterInfo = (req, res, next) => {
   // get zipcode from req.params
-  const { filterInfo } = req.params;
+  const { filterInfo } = req.body;
   const { zipcode, cuisines, amenities } = filterInfo;
+  console.log('zipcode, cuisines, amenities', zipcode, cuisines, amenities)
   // need to get the specific amenities and cuisine out of the arrays somehow
   // get amenity ids for appropriate ammenities
   // 
   // join query to get amenities
   // use dummy data for cuisi
   const queryString = `
-    SELECT * 
+    SELECT restaurants.* 
     FROM restaurants 
     INNER JOIN ser_rest_relation 
     ON restaurant.restaurant_id = ser_rest_relation.fk_restaurant_id
@@ -76,7 +81,7 @@ restaurantController.byFilterInfo = (req, res, next) => {
 // post request to edit comment
 
 // post request to delete comment
-
+module.exports = restaurantController;
 
 /*
 Cuisine types:
