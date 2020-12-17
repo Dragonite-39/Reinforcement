@@ -11,8 +11,9 @@
 
  import * as types from '../constants/actionTypes.js';
 
- export const filterRestaurants = () => ({
-   type : types.FILTER_RESTAURANTS
+ export const filterRestaurants = (filterData) => ({
+   type : types.FILTER_RESTAURANTS,
+   payload: filterData
  });
 
  export const addRestaurant = () => ({
@@ -30,3 +31,12 @@ export const addComment = () => ({
 export const getComments = () => ({
   type : types.GET_COMMENTS
 });
+
+export const loginUser = () => ({
+  type : types.LOGIN_USER
+});
+
+export const handleZipInput = () => ({
+  type: types.HANDLE_ZIP_INPUT,
+  payload: payload
+})

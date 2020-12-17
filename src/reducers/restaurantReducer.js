@@ -14,7 +14,8 @@
  const initialState = {
     currentRestaurant: null,
     filterInfo: {
-      zip: null,
+      zipcode: '',
+      // 11207 ,
       cuisine: [],
       amenities: []
     },
@@ -31,6 +32,7 @@
       // {
       //   name: '',
       //   restaurantId: '',
+      //   zip: '', 
       //   cuisine: '',
       //   address: '',
       //   phone: '',
@@ -42,14 +44,15 @@
       //   comments: [
       //     {
       //       commintId: '', 
-      //       text: '',
+      //       comment: '',
       //       username: '',
       //       timestamp: ''
       //     }
       //   ]
       // }
     username: '',
-    userId: ''
+    userId: '',
+    cuisines: ["American", "Vegetarian", "Chinese", "Japanese", "Thai", "Indian", "Italian", "Pizza", "Mexican", "Korean", "Latin American", "Caribbean", "Soul Food", "BBQ", "Vietnamese", "Other"]
  };
 
  const restaurantReducer = (state = initialState, action) => {
@@ -71,6 +74,11 @@
 
       case types.GET_COMMENTS:
 
+
+      case types.LOGIN_USER:
+
+
+      case types.HANDLE_ZIP_INPUT:
 
       default:
         return state;

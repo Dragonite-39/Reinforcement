@@ -15,8 +15,11 @@ import store from './store';
 
 render (
   <Provider store = { store }>
+
     <App />
-    <h2>TESTINGGGG</h2>
+    
   </Provider>,
   document.getElementById('root')
 );
+
+
